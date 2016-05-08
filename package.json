@@ -19,5 +19,8 @@
     "babel-preset-es2015-node6": "^0.2.0",
     "babel-preset-stage-0": "^6.5.0",
     "nodemon": "^1.9.2"
+  },
+  "engines": {
+    "node": ">= 6.1.0"
   }
 }
