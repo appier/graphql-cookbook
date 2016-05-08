@@ -88,7 +88,10 @@ query ($array: [Float], $input: MultiplierInputType) {
     result
   }
 }
+```
+
 Variable:
+```js
 {
   "array": [1,2,3],
   "input": {"x": 3, "y": 5}
