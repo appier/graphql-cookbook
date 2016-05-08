@@ -31,7 +31,7 @@ The code in src/graphql/module are organized by the following section.
 * mutation.js : Implement mutation.
 
 
-### Type definition and basic resolve implementation.
+### Type definition and basic resolve implementation
 
 - The type, query definiton, and dummy data is located at src/graphql/module/basic.js
 - In this section, we implement a common jointed data structure, and use resolve to build an nested an query for that data structure.
@@ -57,7 +57,7 @@ query {
 ```
 
 
-### Use variable to Simplify Query and Define input type.
+### Use variable to Simplify Query and Define input type
 
 - The type, query definiton, and dummy data is located at src/graphql/module/variable.js
 - In this section, we define an input type to check whether query has an right parameter data structure or not. Thanks for this type definition, we can also abstract those query param to variable, and make your query more elegant.
@@ -95,7 +95,7 @@ Variable:
 }
 ```
 
-### Build an interface for fragment query.
+### Build an interface for fragment query
 
 - The type, query definiton, and dummy data is located at src/graphql/module/interface.js
 - In this section, we define an interface to allow different type to share the same fields. With help of interface definition, we are able to use fragment to simplify our queries involving different type with same fields.
@@ -170,7 +170,7 @@ query {
 ```
 
 
-### Implement mutation.
+### Implement mutation
 
 - The type, query definiton, and dummy data is located at src/graphql/module/mutation.js
 - In this section, we implement simple mutation for creating and updating our data.
