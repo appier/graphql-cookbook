@@ -29,6 +29,7 @@ The code in src/graphql/module are organized by the following section.
 * interface.js : Build an interface for fragment query.
 * unionType.js : Define union type for dynamic data schema.
 * mutation.js : Implement mutation.
+* dataLoader.js : Demonstrate how to use dataload to improve request performance.
 
 
 ### Type definition and basic resolve implementation
