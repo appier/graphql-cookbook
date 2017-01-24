@@ -200,3 +200,32 @@ mutation updateCompany {
   }
 }
 ```
+
+### DataLoader
+
+When you request the nested data which used before, resolve function will still hit DB to get data everytime. This will cause lots of unnecessary burden to DB. With dataload, it will cache result in top resolve function, and avoid to hit DB in children resolve.
+
+```js
+query {
+  queryUser(userId: "userId1") {
+    userId
+    friends {
+      userId
+      friends {
+        userId
+      }
+    }
+  }
+}
+
+query {
+  queryUserWithDataLoader(userId: "userId1") {
+    userId
+    friends {
+      userId
+      friends {
+        userId
+      }
+    }
+  }
+}
