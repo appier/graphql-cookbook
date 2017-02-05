@@ -230,3 +230,7 @@ query {
     }
   }
 }
+
+## License
+
+MIT Licensed. Copyright (c) Appier Inc. 2017.
