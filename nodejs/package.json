@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-graphql-example",
+  "version": "1.0.0",
+  "description": "A GraphQL server example with Apollo Server",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "babel-node src/index",
+    "lint": "eslint src/"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^1.0.5",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.4.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "graphql": "^0.10.5",
+    "prettier": "^1.5.3"
+  }
+}
