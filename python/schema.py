@@ -20,13 +20,13 @@ class Query(graphene.ObjectType):
     )
   )
 
-  def resolve_server_time(self, args, context, info):
+  def resolve_server_time(obj, args, context, info):
     return str(datetime.now())
 
-  def resolve_server_time_obj(self, args, context, info):
+  def resolve_server_time_obj(obj, args, context, info):
     return datetime.now()
 
-  def resolve_server_time_with_input(self, args, context, info):
+  def resolve_server_time_with_input(obj, args, context, info):
     tz = timezone(timedelta(hours=args['timezone']))
     delta = timedelta(
       hours=args['offset'].get('hour', 0),
