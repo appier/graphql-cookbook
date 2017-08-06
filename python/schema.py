@@ -8,8 +8,16 @@ class Query(graphene.ObjectType):
   server_time_obj = graphene.Field(Time)
   server_time_with_input = graphene.Field(
     graphene.String,
-    timezone=graphene.Argument(graphene.Int, default_value=8),
-    offset=graphene.Argument(TimeInput, default_value=dict())
+    timezone=graphene.Argument(
+      graphene.Int,
+      default_value=8,
+      description="UTC+N, N=-24~24."
+    ),
+    offset=graphene.Argument(
+      TimeInput,
+      default_value=dict(),
+      description="Offsets the returned time with given hour, minute and second."
+    )
   )
 
   def resolve_server_time(self, args, context, info):

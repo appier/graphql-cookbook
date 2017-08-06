@@ -21,8 +21,15 @@ export default new GraphQLSchema({
       serverTimeWithInput: {
         type: GraphQLString,
         args: {
-          timezone: { type: GraphQLString },
-          offset: { type: TimeInput },
+          timezone: {
+            type: GraphQLString,
+            description: 'Timezone name (Area/City)',
+          },
+          offset: {
+            type: TimeInput,
+            description:
+              'Offsets the returned time with given hour, minute and second.',
+          },
         },
         resolve(obj, { timezone = 'Asia/Taipei', offset = {} }) {
           const offsetValue = getOffsetMillisecond(offset);
