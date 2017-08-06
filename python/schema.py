@@ -2,6 +2,7 @@ import graphene
 from datetime import datetime, timezone, timedelta
 from .types.time import Time
 from .types.time_input import TimeInput
+from .mutations.create_person import CreatePerson
 
 class Query(graphene.ObjectType):
   server_time = graphene.Field(graphene.String)
@@ -35,4 +36,7 @@ class Query(graphene.ObjectType):
     )
     return str(datetime.now(tz) + delta)
 
-schema = graphene.Schema(query=Query)
+class Mutation(graphene.ObjectType):
+  create_person = CreatePerson.Field()
+
+schema = graphene.Schema(query=Query, mutation=Mutation)

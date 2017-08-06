@@ -1,6 +1,7 @@
 import { GraphQLSchema, GraphQLObjectType, GraphQLString } from 'graphql';
 import Time from './types/time';
 import TimeInput from './types/timeInput';
+import CreatePersonResult from './types/createPersonResult';
 
 export default new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -37,6 +38,25 @@ export default new GraphQLSchema({
             timeZone: timezone,
           });
           return date;
+        },
+      },
+    },
+  }),
+
+  mutation: new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+      createPerson: {
+        type: CreatePersonResult,
+        args: { name: { type: GraphQLString } },
+        resolve(obj, args) {
+          const person = { name: args.name };
+          // Should do something that persists
+          // the person
+          return {
+            ok: true,
+            person,
+          };
         },
       },
     },
