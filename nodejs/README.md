@@ -4,7 +4,7 @@ GraphQL Cookbook -- NodeJS example
 ## Setup
 
 ```
-$ https://github.com/appier/graphql-cookbook.git
+$ git clone https://github.com/appier/graphql-cookbook.git
 $ cd graphql-cookbook/nodejs
 $ yarn # Or `npm install` if you don't have yarn
 ```

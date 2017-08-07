@@ -4,7 +4,7 @@ GraphQL Cookbook -- Python example
 ## Setup
 
 ```
-$ https://github.com/appier/graphql-cookbook.git
+$ git clone https://github.com/appier/graphql-cookbook.git
 $ cd graphql-cookbook/python
 $ virtualenv -p python3 venv
 (venv) $ pip install -r requirements.txt
