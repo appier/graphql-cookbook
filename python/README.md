@@ -16,5 +16,5 @@ $ virtualenv -p python3 venv
 (venv) $ FLASK_APP=app.py flask run
 ```
 
-* GET `http://localhost:3000` will get graphiql interface
-* POST `http://localhost:3000` is the endpoint to server
+* GET `http://localhost:5000/graphql` will get graphiql interface
+* POST `http://localhost:5000/graphql` is the endpoint to server
