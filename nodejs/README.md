@@ -15,5 +15,5 @@ $ yarn # Or `npm install` if you don't have yarn
 $ yarn start
 ```
 
-* GET `http://localhost:5000` will get graphiql interface
-* POST `http://localhost:5000` is the endpoint to server
+* GET `http://localhost:5000/graphql` will get graphiql interface
+* POST `http://localhost:5000/graphql` is the endpoint to server
